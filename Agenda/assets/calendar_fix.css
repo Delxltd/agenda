@@ -1,0 +1,7 @@
+/* Small overrides to ensure the calendar is clickable and visible */
+.pro-calendar{position:relative;flex:1;min-height:480px}
+.pro-calendar-inner{height:100%;min-height:480px}
+/* Make sure nothing overlays the calendar unintentionally */
+#evtTip, #evtCountBar{pointer-events:none}
+/* Basic .hidden helper used by modal toggling */
+.hidden{display:none!important}

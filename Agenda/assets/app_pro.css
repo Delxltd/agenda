@@ -1,0 +1,5 @@
+/* Minimal, clean theme tweaks */
+:root{ --brand:#2563eb; --border:#e5e7eb; --bg:#f7f8fb; --paper:#fff; }
+body{ background:var(--bg); }
+.card{ background:var(--paper); border:1px solid var(--border); border-radius:14px; }
+button, .btn, input, select, textarea { font:inherit; }
