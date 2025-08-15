@@ -1,0 +1,7 @@
+:root{
+  --brand:#2563eb;
+  --border:#e5e7eb;
+}
+.fc .fc-event.is-cancelled{opacity:.55;text-decoration:line-through;filter:grayscale(.4)}
+/* Optional: nicer dragging hint */
+.fc .fc-event-dragging{box-shadow:0 6px 18px rgba(0,0,0,.15)}

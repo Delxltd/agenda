@@ -1,0 +1,67 @@
+/* Dation-style Theme v3 — minimal, strak, full-height calendar */
+:root{
+  --header-h: 56px;
+  --ring: 2px;
+  --brand: #2563eb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+html,body{height:100%}
+.app-main{padding-top:var(--header-h);}
+.is-calendar .app-main{padding-top:calc(var(--header-h) + 8px);}
+
+/* Nav links */
+.nav-link{color:#334155}
+.nav-link:hover{color:var(--brand)}
+.nav-link.is-active{color:var(--brand); font-weight:600}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:.5rem;padding:.5rem .75rem;border:1px solid var(--border);font-size:.875rem}
+.btn:hover{background:#f3f4f6}
+.btn-primary{background:var(--brand);color:#fff;border-color:transparent}
+.btn-primary:hover{filter:brightness(0.95)}
+.btn-subtle{background:#fff;color:#0f172a}
+
+/* Flash messages */
+.flash{margin-top:.75rem;margin-bottom:.75rem;border:1px solid var(--border);background:#fff;padding:.625rem .75rem;border-radius:.5rem;font-size:.875rem}
+.flash-success{border-color:#bbf7d0;background:#ecfdf5;color:#166534}
+.flash-error{border-color:#fecaca;background:#fef2f2;color:#991b1b}
+.flash-info{border-color:#bfdbfe;background:#eff6ff;color:#1e40af}
+
+/* Container sizing */
+.container, .max-w-\[1200px\]{max-width:1200px}
+
+/* CALENDAR PAGE */
+.is-calendar .max-w-\[1200px\]{max-width:none}
+.is-calendar .mx-auto{max-width:none}
+.is-calendar .app-main .px-4{padding-left:1rem;padding-right:1rem}
+
+/* FullCalendar tweaks */
+.calendar-shell{height:calc(100vh - var(--header-h) - 1rem)}
+.calendar-shell .calendar-toolbar{margin-bottom:.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.calendar-shell #calendar{height:100%}
+
+.fc .fc-toolbar.fc-header-toolbar{margin:0 0 .5rem}
+.fc .fc-toolbar-title{font-size:1rem;font-weight:600;color:#0f172a}
+.fc .fc-button{background:#fff;border:1px solid var(--border);color:#0f172a;border-radius:.5rem;padding:.25rem .5rem;box-shadow:none}
+.fc .fc-button:hover{background:#f3f4f6}
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:focus{background:var(--brand);border-color:var(--brand);color:#fff}
+.fc .fc-button:focus{box-shadow:0 0 0 2px rgba(37,99,235,.2)}
+
+.fc-theme-standard .fc-scrollgrid{border-color:var(--border)}
+.fc .fc-timegrid-axis{color:#475569}
+.fc .fc-timegrid-slot{height:2.2rem}
+.fc .fc-timegrid-slot-label{color:#64748b}
+.fc .fc-col-header-cell{background:#f8fafc}
+.fc .fc-col-header-cell-cushion{padding:.5rem 0;font-weight:600;color:#0f172a}
+.fc .fc-timegrid NowIndicator{border-color:var(--brand)}
+.fc .fc-timegrid-event{border-radius:.5rem;border:none;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+
+/* Modal layering */
+#createModal{z-index:9999}
+#createModal .modal-card{position:relative;z-index:10000}
